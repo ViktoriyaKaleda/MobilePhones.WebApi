@@ -44,11 +44,8 @@ namespace MobilePhones.WebApi
 
             MapperInitializer.MapperConfiguration();
 
-            // Intentional mistake for the next task with hotfix
-            services.AddScoped<IImageService, ImageService>();
-
-            //services.AddScoped<IImageService, ImageService>(service =>
-            //    new ImageService(Configuration.GetValue<string>("ImagesFolderName"), _loggerFactory.CreateLogger<ImageService>()));
+            services.AddScoped<IImageService, ImageService>(service =>
+                new ImageService(Configuration.GetValue<string>("ImagesFolderName"), _loggerFactory.CreateLogger<ImageService>()));
 
             services.AddScoped<IMobilePhoneService, MobilePhoneService>();
 
