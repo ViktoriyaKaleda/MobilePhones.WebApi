@@ -12,7 +12,13 @@ namespace MobilePhones.Services.Models
         /// Saves an image in server folder.
         /// </summary>
         /// <param name="imageFile">A <see cref="IFormFile"/>.</param>
-        /// <returns></returns>
+        /// <returns>A <see cref="Task{string}"/>.</returns>
         Task<string> SaveImage(IFormFile imageFile);
+
+        /// <summary>
+        /// Deletes an image in server folder.
+        /// </summary>
+        /// <param name="path">An image path.</param>
+        void DeleteImage(string path);
     }
 }
