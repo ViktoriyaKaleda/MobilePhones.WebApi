@@ -1,0 +1,32 @@
+[
+  {
+    "Id": 3,
+    "Name": "Apple iPhone 8",
+    "PhotoPath": "Images/Apple iPhone 8194509195.jpg"
+  },
+  {
+    "Id": 4,
+    "Name": "Samsumg Galaxy S9",
+    "PhotoPath": "Images/Samsung galaxy s9194718387.jpg"
+  },
+  {
+    "Id": 5,
+    "Name": "Xiaomi Redmi Note2",
+    "PhotoPath": "Images/xiaomi redmi note 2194016375.jpeg"
+  },
+  {
+    "Id": 6,
+    "Name": "Huawei p20 pro",
+    "PhotoPath": "Images/huawei-p20-pro-header193754410.jpg"
+  },
+  {
+    "Id": 7,
+    "Name": "Sony Xperia",
+    "PhotoPath": "Images/Sony Xperia XZ4194802916.jpg"
+  },
+  {
+    "Id": 12,
+    "Name": "LG V30",
+    "PhotoPath": "Images/LG V30193543547.jpg"
+  }
+]
