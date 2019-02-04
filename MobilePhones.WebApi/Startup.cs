@@ -21,9 +21,12 @@ namespace MobilePhones.WebApi
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        private readonly ILoggerFactory _loggerFactory;
+
+        public Startup(IConfiguration configuration, ILoggerFactory loggerFactory)
         {
             Configuration = configuration;
+            _loggerFactory = loggerFactory;
         }
 
         public IConfiguration Configuration { get; }
@@ -41,8 +44,11 @@ namespace MobilePhones.WebApi
 
             MapperInitializer.MapperConfiguration();
 
-            services.AddScoped<IImageService, ImageService>(service =>
-                new ImageService(Configuration.GetValue<string>("ImagesFolderName")));
+            // Intentional mistake for the next task with hotfix
+            services.AddScoped<IImageService, ImageService>();
+
+            //services.AddScoped<IImageService, ImageService>(service =>
+            //    new ImageService(Configuration.GetValue<string>("ImagesFolderName"), _loggerFactory.CreateLogger<ImageService>()));
 
             services.AddScoped<IMobilePhoneService, MobilePhoneService>();
 
